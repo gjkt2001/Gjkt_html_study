@@ -1,0 +1,114 @@
+*{ margin:0;padding:0;}
+html, body { 
+	height:100%;
+}
+html {
+	min-width:980px;/*浏览器缩小时，网页显示的宽度最小为980px*/
+}
+
+
+
+img {
+	border:0; 
+	vertical-align:top; 
+	text-align:left;
+}
+ul, ol { 
+	list-style:none;/*取消前面的黑色圆点*/
+}
+div.zuo{
+	color:blue;
+}
+/*头部*/
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+ /*这里设置边缘距离，是否填充*/
+}
+.container {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+	margin-top:-9px;
+}
+
+.headimg { 
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+/*导航页*/
+	/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+	/* 导航链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+	/* 链接 - 修改颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/*内容部分*/
+.column {
+  float: left;
+}
+ 
+	/* 左右侧栏的宽度 */
+.column.side {
+  width: 25%;
+}
+ 
+	/* 中间列宽度 */
+.column.middle {
+  width: 50%;
+}
+ 
+	/* 响应式布局 - 宽度小于600px时设置上下布局 */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+/*底部区域*/
+#container{
+    /*保证footer是相对于container位置绝对定位*/
+    position:relative;  
+    width:100%;
+    min-height:170%; /*更改这里直接改页脚位置*/
+    /*设置padding-bottom值大于等于footer的height值，以保证main的内容能够全部显示出来而不被footer遮盖；*/  
+    padding-bottom: 150px;  
+    box-sizing: border-box;
+}
+footer{
+    width: 100%;
+    height:30px;   /* footer的高度一定要是固定值*/ 
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background: #333;
+    text-align: center;
+color:white;
+}
+/*其它*/
+a:hover{                             /*鼠标悬停*/
+		color:white;
+		text-decoration:underline;   /*鼠标悬停时出现下划线*/
+}
